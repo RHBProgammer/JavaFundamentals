@@ -1,0 +1,69 @@
+    private void btnClearActionPerformed(java.awt.event.ActionEvent evt) {                                         
+        
+        
+        //Array empty
+        String data[] = new String[0];
+        
+        //clears fields
+        lblDisplay.setText("");
+        lstTestNumber.setListData(data);
+    }                                        
+
+    private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {                                        
+        
+        //Exits program
+        System.exit(0);
+    }                                       
+
+    private void btnEnterMarkActionPerformed(java.awt.event.ActionEvent evt) {                                             
+           
+        //Try catch
+        try {
+            
+            //Declarations for array to store marks
+            int x;
+            String Marks[] = new String[10];
+            
+            //array for showing test number
+            String testNumber[] = {"Test 1 =", "Test 2 =","Test 3 =", "Test 4 =","Test 5 =", "Test 6 =","Test 7 =", "Test 8 =","Test 9 =", "Test 10 ="};
+            
+            //to store 'full' name
+            String Namae = "";
+            int n;
+            
+            //Declarations for which test mark to should be put in
+            int mark = 0;
+        
+            //Declarations for next mark input and input of mark
+            String input;
+            int result = 0;
+        
+            //Other declarations
+            double average;
+            
+            //to fetch and store name
+            for (n = 0; n < 1; n++){
+            input = JOptionPane.showInputDialog("Please enter name: ");
+            Namae = String.valueOf(input);
+            
+            
+            //to loop through and store a total of 10 marks
+            for (x = 0; x < Marks.length; x++){
+            Marks[x] = JOptionPane.showInputDialog("Please insert mark for Test " + (mark = mark + 1));
+            
+            result = result + (Integer.parseInt(Marks[x]));
+            }
+            }
+            //to display and calculate the average of the marks
+            average = result/Marks.length;
+            lblDisplay.setText(String.valueOf(average));
+            lblName.setText(Namae);
+            lstTestNumber.setListData(Marks);
+            lstDisplay.setListData(testNumber);
+            
+        }
+        //if there is an error then this should catch and display that an error has occured
+        catch (Exception err) {
+            JOptionPane.showMessageDialog(rootPane, "an error might have occured");
+        }
+    }       
