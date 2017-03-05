@@ -1,0 +1,55 @@
+
+/**
+ * GROUP NAMES: BYRON YOUNG, KEVIN CRONJE, LAWRENCE MAPONIE, SHANE MOODLEY
+ */
+// Class book is the super class
+public class Book {
+    
+    //declarations
+    //store from the textbox
+    String Title;
+    String ISBN;
+    String Author;
+    String Publisher;
+    int bookType = 0;
+    double costPrice = 0;
+    
+     
+}
+// Class fiction inherits class book
+class Fiction extends Book{
+    
+    //Declarations
+    final double vatPerc = 0.14;
+   
+    
+    public double CalcSellingPrice(double CostPrice){
+        
+        //calculations
+        double sellingPriceFic = CostPrice + (CostPrice * vatPerc);
+        return sellingPriceFic;
+    }
+
+}
+// Class Education inherits class book
+class Education extends Book{
+    
+    //declarations
+    double discountRate1 = 0.05;
+    double discountRate2 = 0.10;
+   
+    
+    public double CalcSellingPriceDiscount1(double CostPrice){
+       
+        //calculations
+       double SellingPrice1 = CostPrice - (CostPrice * discountRate1);
+        return SellingPrice1;
+    }
+    
+    public double CalcSellingPriceDiscount2(double CostPrice){
+        
+        //calculations
+       double SellingPrice2 = CostPrice - (CostPrice * discountRate2);
+        return SellingPrice2;
+    }
+}
