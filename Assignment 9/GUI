@@ -2,7 +2,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * GROUP NAMES: BYRON YOUNG, KEVIN CRONJE, LAWRENCE MAPONIE, SHANE MOODLEY
+ * GROUP ASSIGNMENT
  */
 public class Books extends javax.swing.JFrame {
 
