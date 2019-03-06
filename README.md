@@ -5,7 +5,3 @@ Projects were all done in Netbeans IDE. Code might be under-developed but it wor
 then I'll improve various aspects of the code accordingly.
 
 RHBProgrammer
-怒り        -- いかり
-頭          --　あたま
-ぶつける
-プログラマー
